@@ -1,6 +1,7 @@
 
 $("#errore").hide();
-converti(){
+
+function converti(){
         var numero_romano = "";
         var n =parseInt(document.getElementById("numero").value);
 
