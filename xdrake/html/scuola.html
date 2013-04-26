@@ -1,36 +1,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>dsadas</title>sadsa
+	<head >
+		<title>XDrake</title>
 	</head>
-	<body  data-role="page" data-add-back-btn="true" >
-
-		<div data-role="collapsible-set" data-theme="a" data-collapsed="false" >
-			<div data-role="collapsible" data-content-theme="a" >
-				<h3>INFORMATICA </h3>
+	<body   >
+		<div data-add-back-btn="true">
+		</div>
+		<div data-role="collapsible-set" data-theme="a" id="info" data-collapsed="false" >
+			<div  data-role='collapsible' data-content-theme='a' >
+				<h3>INFORMATICA</h3>
 				<ul class="ui-listview" data-dividertheme="d" data-theme="c" data-role="listview">
 					<li class="ui-li ui-li-divider ui-bar-d" data-role="list-divider" role="heading">Esercizi</li>
 					<li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c" data-corners="false"data-theme="c">
 						<a onClick="window.open('http://testsolar.zxq.net/scuola/informatica/01_laib_2013.pdf', '_blank', 'location=yes,enableViewportScale=yes');" >Settimana 1</a>
-						<a data-icon="search" data-iconpos="right" onclick="window.open('http://testsolar.zxq.net/scuola/informatica/01_laib_2013.pdf', '_blank', 'location=yes,enableViewportScale=yes');" >WIKI</a>
 					</li>
+
 				</ul>
 			</div>
+
 		</div>
-		<ul data-role="listview" >
-			<li>
-				<a data-transition="slide" >Informatica</a>
-			</li>
-			<li data-theme="d">
-				<a data-transition="slide" >Informatica</a>
-			</li>
-			<li  data-theme="b" >
-				<a  data-transition="slide"  data-icon="search" data-iconpos="right" onclick="window.open('https://www.wikipedia.org/', '_blank', 'location=yes,enableViewportScale=yes');" >WIKI</a>
-			</li>
-			<li data-theme="e">
-				<a text-align="center" data-transition="flow" data-icon="home" data-theme="e" onclick="window.open('http://grylan.tumblr.com/', '_blank', 'location=no,enableViewportScale=yes');" >Grylan-Tumblr!</a>
-			</li>
-		</ul>
+
+		<script type="text/javascript">
+			carica();
+			
+			/*var num_materie = 3;
+			var materie = new Array("Settimana 1", "Settimana 2", "Settimana 3");
+			var link = new Array("http://google.com", "http://google.com", "http://google.com");
+			var settimana = new Array("Settimana 1", "Settimana 2", "Settimana 3");            
+			/*for (i=0;i < num_materie;i++) {              
+			var link_esterni = "<li onClick=\"window.open('" + link[i] + "', '_blank', 'location=yes,enableViewportScale=yes');\">&quot;Settimana 1</li>";
+			var contenuto = "<ul class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + settimana[i] + link_esterni + "</li> </ul>";
+			var html = "<div  data-role='collapsible' data-content-theme='a' ><h3>" + materie[i] + "</h3>" + contenuto + "</div>";
+			$("#info").append(html);   
+			}*/
+		</script>
+		
+		<div data-theme="a" data-role="header" data-add-back-btn="true" data-position="fixed">
+			<h3>Scuola</h3>
+			<a data-rel="back" data-icon="arrow-l" class="ui-btn-left" >Back</a>
+		</div>
+		<div data-role="footer" data-position="fixed" data-id="oneFooter">
+			<span class="footerText">Created by Grylan</span>
+		</div>
 	</body>
 </html>

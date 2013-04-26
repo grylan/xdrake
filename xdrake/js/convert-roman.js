@@ -1,13 +1,32 @@
 
 $("#errore").hide();
 
-var lista = new Array("lol1");
-
-lista[0] = "lol1";
-
-var aggiungi = function add_link() {
-	alert("3");    
-};
+function carica() {
+     var materie;
+				
+	$.ajax({
+		type: "GET",url: "test.xml",dataType: "xml",
+		success: function(xml) {
+			$(xml).find('materia').each(function() {
+				 materie = $(this).find('title').text();
+				var header_test = $(this).find('header').text();
+				//	alert(materie);
+				//	var num_materie = 3;
+				materie = new Array("Settimana 1", "Settimana 2", "Settimana 3");
+				//	var link = new Array("http://google.com", "http://google.com", "http://google.com");
+				//	var settimana = new Array("Settimana 1", "Settimana 2", "Settimana 3");
+				
+				//var link_esterni = "<li onClick=\"window.open('" + link[i] + "', '_blank', 'location=yes,enableViewportScale=yes');\">&quot;Settimana 1</li>";
+				//	var contenuto = "<ul class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + settimana[i] + link_esterni + "</li> </ul>";
+			
+				
+               
+			});
+		}
+	});
+    var html = "<div data-role = 'collapsible'data-content-theme='a' ><h4> INFORMATICA <\h4><\div>";
+				$("#info").append(html); 
+}
 
 function converti() {
 	var numero_romano = "";

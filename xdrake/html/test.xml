@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<corso>
+	<materia id="0">
+		<title>Informatic12a</title>
+		<header id="1">Settimana</header>
+	</materia>
+	<materia id="1">
+		<title>Geometria32</title>
+		<header>Settimana</header>
+	</materia>
+	<materia id="2">
+		<title>Fisica41</title>
+		<header id="1">Settimana</header>
+	</materia>
+
+	<site id="2">
+		<title>jaredharbour.com</title>
+		<url>http://www.jaredharbour.com</url>
+		<desc>
+			<brief>this is the brief description.</brief>
+			<long>...and this is the long description. See how long it is :)</long>
+		</desc>
+	</site>
+</corso>

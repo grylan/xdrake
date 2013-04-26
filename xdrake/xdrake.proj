@@ -62,6 +62,8 @@
     <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="html\test.xml" />
+    <Content Include="js\doc_link.txt" />
     <Content Include="html\scuola.html" />
     <Content Include="index.html" />
     <Content Include="jquery-mobile\images\ajax-loader.gif" />

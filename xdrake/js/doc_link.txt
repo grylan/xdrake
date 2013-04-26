@@ -1,0 +1,66 @@
+Informatica
+  nome_h:Esercizi$f
+  n_l:Settimana 1$l:/informatica/01_laib_2013.pdf$f
+  n_l:Settimana 2$l:/informatica/02_laib_2013.pdf$f
+  n_l:Settimana 3$l:/informatica/03_laib_2013.pdf$f
+  n_l:Settimana 4$l:/informatica/04_laib_2013.pdf$f
+  n_l:Settimana 5$l:/informatica/05_laib_2013.pdf$f
+  n_l:Settimana 5$l:/informatica/05_laib_2013.pdf$f
+  $fh
+  sott_mat:Soluzioni$f
+	  nome_h:Settimana 1$f
+	  n_l:Es 1$l:/informatica/soluz/lab01/es1.txt$f
+	  n_l:ES 2$l:/informatica/soluz/lab01/es2.pdf$f
+	  n_l:Es 3$l:/informatica/soluz/lab01/es3.txt$f
+	  n_l:Es 3-b$l:/informatica/soluz/lab01/es3-b.pdf$f
+	  n_l:Es 3-b$l:/informatica/soluz/lab01/es4.txt$f
+	  n_l:Es 5$l:/informatica/soluz/lab01/es5.pdf$f
+	  n_l:Es 6$l:/informatica/soluz/lab01/es6.txt$f
+	  $fh
+	  nome_h:Settimana 2$f
+	  n_l:Es 1$l:/informatica/soluz/lab02/es1.txt$f
+	  n_l:ES 2$l:/informatica/soluz/lab02/es2.txt$f
+	  n_l:Es 3$l:/informatica/soluz/lab03/es3.txt$f
+	  n_l:Es 4$l:/informatica/soluz/lab02/es4.txt$f
+	  n_l:Es 5$l:/informatica/soluz/lab02/es5.txt$f
+	  n_l:Es 6$l:/informatica/soluz/lab02/es6.pdf$f
+	  $fh
+	  nome_h:Settimana 3$f
+	  n_l:Es 1$l:/informatica/soluz/lab03/es1.txt$f
+	  n_l:ES 2$l:/informatica/soluz/lab03/es2.txt$f
+	  n_l:Es 3$l:/informatica/soluz/lab03/es3.txt$f
+	  n_l:Es 4$l:/informatica/soluz/lab03/es4.txt$f
+	  n_l:Es 6$l:/informatica/soluz/lab03/es6.pdf$f
+	  $fh
+  $fsmat
+fmat
+Geometria
+  nome_h:Dispense$f
+  n_l:1 Matrici						$l:/geometria/1matrici.pdf$f
+  n_l:2 Sistemi						$l:/scuola/geometria/2sistemi.pdf$f
+  n_l:3 Vettori Geometrici			$l:/geometria/3vettorigeom.pdf$f
+  n_l:4 Rette e Piani				$l:/geometria/4rettepiani.pdf$f
+  n_l:5 Sfere e circonferenze 		$l:/geometria/5sferecirconferenze.pdf$f
+  n_l:6 Curve						$l:/geometria/6curve.pdf$f
+  n_l:7 Spazi Vettoriali			$l:/geometria/7spazivettoriali.pdf$f
+  n_l:8 Applicazioni lineari		$l:/geometria/8applicazionilineari.pdf$f
+  n_l:9 Diagonalizzazione			$l:/geometria/9diagonalizzazione.pdf$f
+  n_l:10 Conichequadriche			$l:/geometria/10conichequadriche.pdf$f
+  n_l:11 Funzioni					$l:/geometria/11funzioni.pdf$f
+  $fh
+  sott_mat:Appelli di Geometria $f
+	nome_h:Settimana 1$f
+	n_l:10 Luglio    2012	$l:/geometria/geom_luglio_2012$f
+	n_l:14 Settembre 2012	$l:/geometria/geom_settembre_2012$f
+	$fh
+  $fsmat
+  n_l:Programma corso$l:/geometria/programma.pdf$f
+fmat
+Fisica
+  nome_h:Esercitazioni$f
+  n_l:1- Cinematica Unidimensionale	$l:/fisica/eserc/1-esercizi_cinematica_unidimensionale_13-03-2013.pdf$f
+  n_l:2- Cinematica Bidimensionale	$l:/fisica/eserc/2-esercizi_cinematica_bidimensionale_20-03-2013.pdf'$f
+  n_l:3- Dinamica del punto			$l:/fisica/eserc/3-esercizi_dinamica_punto_10-04-2013.pdf$f
+  n_l:4- Dinamica del punto 2		$l:/fisica/eserc/4-esercizi_dinamica_punto_27-03-2013.pdf$f
+  n_l:5- Energia e moti relativi 	$l:/fisica/eserc/5-esercizi_energia_e_moti_relativi_17-04-2013_v2.pdf$f
+  $fh
