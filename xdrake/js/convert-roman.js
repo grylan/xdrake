@@ -2,30 +2,31 @@
 $("#errore").hide();
 
 function carica() {
-     var materie;
+	var materie;
 				
 	$.ajax({
-		type: "GET",url: "test.xml",dataType: "xml",
+		type: "GET",
+		url: "test.xml",dataType: "xml",
+		
 		success: function(xml) {
 			$(xml).find('materia').each(function() {
-				 materie = $(this).find('title').text();
-				var header_test = $(this).find('header').text();
-				//	alert(materie);
+				materie = $(this).find('title').text();
+				var header = $(this).find('header').text();
+				
 				//	var num_materie = 3;
-				materie = new Array("Settimana 1", "Settimana 2", "Settimana 3");
-				//	var link = new Array("http://google.com", "http://google.com", "http://google.com");
+				//	materie = new Array("Settimana 1", "Settimana 2", "Settimana 3");
+				var link = new Array("http://google.com", "http://google.com", "http://google.com");
 				//	var settimana = new Array("Settimana 1", "Settimana 2", "Settimana 3");
 				
-				//var link_esterni = "<li onClick=\"window.open('" + link[i] + "', '_blank', 'location=yes,enableViewportScale=yes');\">&quot;Settimana 1</li>";
-				//	var contenuto = "<ul class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + settimana[i] + link_esterni + "</li> </ul>";
+				var link_esterni = "<li onClick=\"window.open('" + link[0] + "', '_blank', 'location=yes,enableViewportScale=yes');\">&quot;Settimana 1</li>";
+				var contenuto = "<ul  class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + header + "</li>" + link_esterni + " </ul>";
+
+				var html = "<div data-role = 'collapsible' data-content-theme='a' ><h4>" + materie + "<\h4>" + contenuto + "<\div>";
+				$("#info").append(html).collapsibleset("refresh"); 
+			})
 			
-				
-               
-			});
 		}
 	});
-    var html = "<div data-role = 'collapsible'data-content-theme='a' ><h4> INFORMATICA <\h4><\div>";
-				$("#info").append(html); 
 }
 
 function converti() {
