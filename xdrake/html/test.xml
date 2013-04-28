@@ -2,7 +2,8 @@
 <corso>
 	<materia id="0">
 		<title>Informatica</title>
-		<header>Settimana</header>
+		<header>Esercizi </header>
+
 	</materia>
 	<materia id="1">
 		<title>Geometria</title>
@@ -10,6 +11,6 @@
 	</materia>
 	<materia id="2">
 		<title>Fisica</title>
-		<header >Esercitazioni</header>
+		<header>Esercitazioni</header>
 	</materia>
 </corso>

@@ -7,26 +7,50 @@
 	<body   >
 		<div data-add-back-btn="true">
 		</div>
-		<div data-role="collapsible-set" data-theme="a" id="info" data-collapsed="false" >
+
+		<div data-role="collapsible-set" data-theme="a"  data-collapsed="false" id="info" >
 			<div  data-role='collapsible' data-content-theme='a' >
-				<h3>INFORMATICA</h3>
-				<ul class="ui-listview" data-dividertheme="d" data-theme="c" data-role="listview">
+				<h3 id="titolo" >INFORMATICA</h3>
+				<ul id="test" class="ui-listview" data-dividertheme="d" data-theme="c" data-role="listview">
 					<li class="ui-li ui-li-divider ui-bar-d" data-role="list-divider" role="heading">Esercizi</li>
 					<li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c" data-corners="false"data-theme="c">
 						<a onClick="window.open('http://testsolar.zxq.net/scuola/informatica/01_laib_2013.pdf', '_blank', 'location=yes,enableViewportScale=yes');" >Settimana 1</a>
 					</li>
-
+					<li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c" data-corners="false"data-theme="c">
+						<a onClick="window.open('http://testsolar.zxq.net/scuola/informatica/01_laib_2013.pdf', '_blank', 'location=yes,enableViewportScale=yes');" >Es2</a>
+					</li>
 				</ul>
 			</div>
 
 		</div>
 
-		<script type="text/javascript">
-			carica();
-            
-			 
+		<script>
 			
-		/*	var num_materie = 3;
+			jQuery.get('../js/doc_link.txt', function(data) {
+				var num_materie = 3;
+				var dati = data;
+				var righe = dati.split("\n");
+				alert(righe[1]);
+				var materie = new Array("Settimana bla 1", "Settimana 2", "Settimana 3");
+				var link = new Array("http://google.com", "http://google.com", "http://google.com");
+				var settimana = new Array("Settimana 1", "Settimana 2", "Settimana 3");     
+                if(materie[0].indexOf("bla")){
+                    alert("trovato bla");
+                    
+                }
+				for (i=0;i < righe.length ;i++) {       
+					//var link_esterni = "<li onClick=\"window.open('" + link[i] + "', '_blank', 'location=yes,enableViewportScale=yes');\">&quot;Settimana 1</li>";
+					//var contenuto = "<ul class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + settimana[i] + link_esterni + "</li> </ul>";
+					var html = "<div data-role='collapsible' data-content-theme='a' ><h3>" + materie[i] + "</h3></div>";
+					$("#info").append(html);
+				}
+			}                     
+			);
+		</script>
+		
+		<script type="text/javascript">
+			//	carica();
+			/*	var num_materie = 3;
 			var materie = new Array("Settimana 1", "Settimana 2", "Settimana 3");
 			var link = new Array("http://google.com", "http://google.com", "http://google.com");
 			var settimana = new Array("Settimana 1", "Settimana 2", "Settimana 3");            
@@ -35,7 +59,7 @@
 			var contenuto = "<ul class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + settimana[i] + link_esterni + "</li> </ul>";
 			var html = "<div  data-role='collapsible' data-content-theme='a' ><h3>" + materie[i] + "</h3>" + contenuto + "</div>";
 			$("#info").append(html); 
-                }*/
+			}*/
 			
 		</script>
 		
