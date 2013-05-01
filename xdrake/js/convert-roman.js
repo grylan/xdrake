@@ -2,13 +2,19 @@
 $("#errore").hide();
 
 function carica() {
-	//var data = load('doc_link.txt');
-	//alert(data.text());
-    var dominio = "http://testsolar.zxq.net/scuola";
+	
+	var dominio = "http://testsolar.zxq.net/scuola";
+    
 	$.ajax({
 		type: "GET",
-		url: "test.xml",
-		dataType: "xml",
+		url: "testsolar.zxq.net/scuola/test.xml",
+        timeout:500,
+		dataType: "xml", error
+		: function (xml) {
+             $("#contenuto").append("<b>Caricamento locale effettuato</b><br>");
+            $("#contenuto").append("Caricamento dal sito remoto non riuscito,link non aggiornati");
+           	ricerca();
+		},
 		success: function(xml) {
 			$(xml).find('materia').each(function() {
 				var materie = $(this).find('title').text();
@@ -21,10 +27,10 @@ function carica() {
 						var link_nome = $(this).attr('nome');
 						var link = $(this).text();				
 				
-						link_esterni = link_esterni + "<font  size=\"3\"><li id=\"casella\" style=\"border-bottom:2pt solid black;\" class=\"ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c\" data-corners=\"false\"data-theme=\"c\" onClick=\"window.open('" +dominio+link + "', '_blank', 'location=yes,enableViewportScale=yes');\"     >" +
+						link_esterni = link_esterni + "<font  size=\"3\"><li id=\"casella\" style=\"border-bottom:2pt solid black;\" class=\"ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c\" data-corners=\"false\"data-theme=\"c\" onClick=\"window.open('" + dominio + link + "', '_blank', 'location=yes,enableViewportScale=yes');\"     >" +
 									   "&nbsp;&nbsp;" + link_nome + "</li></font>";
 					});
-					titolo_header = titolo_header + "<font size=\"3\"><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + $(this).attr('titolo') +"</font>"+ link_esterni;
+					titolo_header = titolo_header + "<font size=\"3\"><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + $(this).attr('titolo') + "</font>" + link_esterni;
 					link_esterni = "";
 				});
              
@@ -34,6 +40,42 @@ function carica() {
 				$("#info").append(html).collapsibleset("refresh"); 
 			});
 		}
+        
+	});
+}
+
+function ricerca(){
+    var dominio = "http://testsolar.zxq.net/scuola";
+    $.ajax({
+		type: "GET",
+		url: "test.xml",
+		dataType: "xml", 
+		success: function(xml) {
+			$(xml).find('materia').each(function() {
+				var materie = $(this).find('title').text();
+				var header = $(this).find('header').text();			
+				var titolo_header = "";//="<li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>"+ $(this).find('header').attr('titolo');
+				var link_esterni = "";
+				$(this).find('header').each(function() {
+					//titolo_header = $(this).attr('titolo');
+					$(this).find('link').each(function() {
+						var link_nome = $(this).attr('nome');
+						var link = $(this).text();				
+				
+						link_esterni = link_esterni + "<font  size=\"3\"><li id=\"casella\" style=\"border-bottom:2pt solid black;\" class=\"ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c\" data-corners=\"false\"data-theme=\"c\" onClick=\"window.open('" + dominio + link + "', '_blank', 'location=yes,enableViewportScale=yes');\"     >" +
+									   "&nbsp;&nbsp;" + link_nome + "</li></font>";
+					});
+					titolo_header = titolo_header + "<font size=\"3\"><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + $(this).attr('titolo') + "</font>" + link_esterni;
+					link_esterni = "";
+				});
+             
+				var contenuto = "<ul align=\"center\" class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'>" +
+								titolo_header + "</li> </ul>";
+				var html = "<div data-role='collapsible' data-content-theme='a' ><h3>" + materie + "</h3>" + contenuto + "</div>";
+				$("#info").append(html).collapsibleset("refresh"); 
+			});
+		}
+        
 	});
 }
 function converti() {
