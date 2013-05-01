@@ -2,39 +2,39 @@
 $("#errore").hide();
 
 function carica() {
-     
-    var data = load('doc_link.txt');
-    alert(data.text());
-/*	$.ajax({
+	//var data = load('doc_link.txt');
+	//alert(data.text());
+    var dominio = "http://testsolar.zxq.net/scuola";
+	$.ajax({
 		type: "GET",
 		url: "test.xml",
 		dataType: "xml",
 		success: function(xml) {
 			$(xml).find('materia').each(function() {
 				var materie = $(this).find('title').text();
-				var header = $(this).find('header').text();
-			
-				//	var num_materie = 3;
-				//	materie = new Array("Settimana 1", "Settimana 2", "Settimana 3");
-				var link = new Array("http://google.com", "http://google.com", "http://google.com");
-				//	var settimana = new Array("Settimana 1", "Settimana 2", "Settimana 3");
+				var header = $(this).find('header').text();			
+				var titolo_header = "";//="<li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>"+ $(this).find('header').attr('titolo');
+				var link_esterni = "";
+				$(this).find('header').each(function() {
+					//titolo_header = $(this).attr('titolo');
+					$(this).find('link').each(function() {
+						var link_nome = $(this).attr('nome');
+						var link = $(this).text();				
 				
-				var link_esterni = "<a onClick=\"window.open('" + link[0] + "', '_blank', 'location=yes,enableViewportScale=yes');\">\"Settimana 1</a>";
-				var contenuto = "<ul data-role=\"listview\" data-divider-theme=\"d\" data-inset=\"false\">" +
-								"<li data-role=\"list-divider\" role=\"heading\">" + 
-								header + "</li> " + 
-								" <li data-theme=\"c\"> <a data-icon=\"gear\" href=\"#ajustes\" data-transition=\"fade\">Section 2.1.1</a>< /li>" + "</ul>";
-				var html = "<div  data-role='collapsible' data-content-theme='a' ><h3>" + materie + "</h3>" + contenuto + "</div>";
-						
+						link_esterni = link_esterni + "<font  size=\"3\"><li id=\"casella\" style=\"border-bottom:2pt solid black;\" class=\"ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c\" data-corners=\"false\"data-theme=\"c\" onClick=\"window.open('" +dominio+link + "', '_blank', 'location=yes,enableViewportScale=yes');\"     >" +
+									   "&nbsp;&nbsp;" + link_nome + "</li></font>";
+					});
+					titolo_header = titolo_header + "<font size=\"3\"><li class='ui-li ui-li-divider ui-bar-d' data-role='list-divider' role='heading'>" + $(this).attr('titolo') +"</font>"+ link_esterni;
+					link_esterni = "";
+				});
+             
+				var contenuto = "<ul align=\"center\" class='ui-listview' data-dividertheme='d' data-theme='c' data-role='listview'>" +
+								titolo_header + "</li> </ul>";
+				var html = "<div data-role='collapsible' data-content-theme='a' ><h3>" + materie + "</h3>" + contenuto + "</div>";
 				$("#info").append(html).collapsibleset("refresh"); 
-  
-				$("#test").append($("<li class=\"ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c\" data-corners=\"false\"data-theme=\"c\"><a  style=\"size:20px\" onClick=\"window.open('http://testsolar.zxq.net/scuola/informatica/01_laib_2013.pdf', '_blank', 'location=yes,enableViewportScale=yes');\" >Settimana 1</a></li>"));
-				$("#test").append(link_esterni);
-				//$("#test").trigger('create');
-				//var value = $('#info').html();
 			});
 		}
-	});*/
+	});
 }
 function converti() {
 	var numero_romano = "";

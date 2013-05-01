@@ -2,15 +2,48 @@
 <corso>
 	<materia id="0">
 		<title>Informatica</title>
-		<header>Esercizi </header>
+		<header titolo ="Esercizi" >
 
+			<link nome="Settimana 1">/informatica/01_laib_2013.pdf</link>
+			<link  nome="Settimana 2">/informatica/02_laib_2013.pdf</link>
+			<link  nome="Settimana 3">/informatica/03_laib_2013.pdf</link>
+			<link  nome="Settimana 4">/informatica/04_laib_2013.pdf</link>
+			<link  nome="Settimana 5">/informatica/05_laib_2013.pdf</link>
+		</header>
+		<sottoheader titolo ="Soluzioni" >
+			<link nome="Es 1">/informatica/soluz/lab01/es1.txt</link>
+			<link nome="Es 2">/informatica/soluz/lab01/es2.pdf</link>
+			<link nome="Es 3">/informatica/soluz/lab01/es3.txt</link>
+			<link nome="Es 3-b">/informatica/soluz/lab01/es3-b.pdf</link>
+			<link nome="Es 4">/informatica/soluz/lab01/es4.txt</link>
+			<link nome="Es 5">/informatica/soluz/lab01/es5.pdf</link>
+			<link nome="Es 6">/informatica/soluz/lab01/es6.txt</link>
+		</sottoheader>
 	</materia>
-	<materia id="1">
+	<materia >
 		<title>Geometria</title>
-		<header>Dispense</header>
+		<header titolo ="Dispense" >
+			<link nome="1 Matrici">/geometria/1matrici.pdf</link>
+			<link  nome="2 Sistemi">/geometria/2sistemi.pdf</link>
+			<link  nome="3 Vettori Geometrici">/geometria/3vettorigeom.pdf</link>
+			<link  nome="4 Rette e Piani">/geometria/4rettepiani.pdf</link>
+			<link  nome="5 Sfere e circonferenze">/geometria/5sferecirconferenze.pdf</link>
+			<link  nome="6 Curve">/geometria/6curve.pdf</link>
+			<link  nome="7 Spazi Vettoriali">/geometria/7spazivettoriali.pdf</link>
+			<link  nome="8 Applicazioni lineari">/geometria/8applicazionilineari.pdf</link>
+			<link  nome="9 Diagonalizzazione">/geometria/9diagonalizzazione.pdf</link>
+		</header>
+
 	</materia>
 	<materia id="2">
 		<title>Fisica</title>
-		<header>Esercitazioni</header>
+		<header titolo ="Esercitazioni" >
+			<link nome="1 Cinematica Unidimensionale">/fisica/eserc/1-esercizi_cinematica_unidimensionale_13-03-2013.pdf</link>
+			<link  nome="2 Cinematica Bidimensionale">/fisica/eserc/2-esercizi_cinematica_bidimensionale_20-03-2013.pdf</link>
+			<link  nome="3 Dinamica del punto">/fisica/eserc/3-esercizi_dinamica_punto_10-04-2013.pdf</link>
+			<link  nome="4 Dinamica del punto 2">/fisica/eserc/4-esercizi_dinamica_punto_27-03-2013.pdf</link>
+			<link  nome="5 Energia e moti relativi ">/fisica/eserc/5-esercizi_energia_e_moti_relativi_17-04-2013_v2.pdf</link>
+		</header>
 	</materia>
+
 </corso>

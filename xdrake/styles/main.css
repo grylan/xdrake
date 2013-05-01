@@ -1,20 +1,26 @@
 body
 {
-    margin-left: 4px;
-    margin-right: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .ui-footer
 {
-    text-align: center;    
+	text-align: center; 
 }
 
 .err
 {
-    color: red;
+	color: red;
 }
 
 #map_canvas
 {
-    text-align:center;
+	text-align: center;
+}
+#casella
+{
+	border-bottom: 2pt solid black;
+	padding: 12px;
+    padding-left:9px;
 }

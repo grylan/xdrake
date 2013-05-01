@@ -5,7 +5,6 @@ Informatica
   n_l:Settimana 3$l:/informatica/03_laib_2013.pdf$f
   n_l:Settimana 4$l:/informatica/04_laib_2013.pdf$f
   n_l:Settimana 5$l:/informatica/05_laib_2013.pdf$f
-  n_l:Settimana 5$l:/informatica/05_laib_2013.pdf$f
   $fh
   sott_mat:Soluzioni$f
 	  nome_h:Settimana 1$f
