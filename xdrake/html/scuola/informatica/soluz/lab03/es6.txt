@@ -1,0 +1,32 @@
+/*
+Informatica/Computer Science
+
+Lab 3
+
+Exercise 6
+
+*/
+/*Si scriva un programma C che acquisisca due numeri interi da tastiera e ne calcoli la media.
+Si controlli il risultato per le seguenti copie: (1,1) (0,8) (2,5) (-5,0) (-3,3).
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a, b, s;
+    float m; /*per calcolare la media bisogna definire un reale: la media di piu numeri interi non è per forza un numero intero*/
+
+    /*Sommare i valori (positivi o negativi) acquisiti in una variabile somma opportunamente definita*/
+    printf("Ingressi due numeri interi\n");
+    scanf("%d%d",&a,&b);
+    s= a+b;
+
+    /*Calcolare la media aritmetica*/
+    m= (float) s/2;  /*si usa "casting" per il risultato della divisione, s è un int, si fa casting a float*/
+
+    /*Visualizzi il risultato sullo schermo*/
+    printf("Media di %d e %d= %.2f\n",a,b,m);
+
+    return 0;
+}

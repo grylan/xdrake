@@ -1,0 +1,46 @@
+/*
+Informatica/Computer Science
+
+Lab 3
+
+Exercise 2
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /*Definire delle variabili intere A, B e C. */
+    int A,B,C;
+
+    printf("A= ");
+    scanf("%d",&A);
+    printf("B= ");
+    scanf("%d",&B);
+
+    /*Eseguo la seguente istruzione:       C = (A==B)*/
+    C=(A==B);
+    /*qual è il valore di C? */
+    printf("C=(A==B) = %d\n",C);
+
+    /*Si ripeta l’esperimento con gli operatori relazionali != , <= , >=*/
+    C=(A!=B);
+    printf("C=(A!=B) = %d\n",C);
+    C=(A<=B);
+    printf("C=(A<=B) = %d\n",C);
+    C=(A>=B);
+    printf("C=(A>=B) = %d\n\n",C);
+
+    /*Approfondimento*/
+    printf("A in [0,1]= ");
+    scanf("%d",&A);
+    printf("B in [0,1]= ");
+    scanf("%d",&B);
+
+    C = ((A && B) || (!B)) && (!A);
+    printf("C=((A&&B)||(!B))&&(!A) = %d\n",C);
+
+    return 0;
+}

@@ -1,0 +1,45 @@
+/*
+Informatica/Computer Science
+
+Lab 3
+
+Exercise 1
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /*a. Definisca 2 variabili di tipo intero: int_1 e int_2*/
+    int int_1, int_2;
+
+    /*b. Definisca 2 variabili di tipo reale: float_1 e float_2.*/
+    float float_1,float_2;
+
+    /*c. Tramite la funzione scanf acquisisca da tastiera un valore reale ed uno intero.*/
+    printf("enter a real value and an integer value.?\n");
+    scanf("%f%d",&float_1,&int_1);
+
+    /*Assegni alle 2 variabili reali il valore reale, ed alle due variabili intere il valore intero*/
+    float_2=float_1;
+    int_2=int_1;
+
+    /*d. Visualizzi su schermo usando la funzione printf il valore assunto dalle 4 variabili con il seguente formato:*/
+    printf("Var\tValue\n");
+
+    /*i. int_1 occupando almeno 5 spazi,*/
+    printf("int_1 %5d\n",int_1);
+
+    /*ii. int_2 occupando almeno 5 spazi e completando gli eventuali spazi liberi con zeri,*/
+    printf("int_2 %05d\n",int_2);
+
+    /*iii. float_1 occupando almeno 5 spazi e con una precisione di 2 posizioni dopo il punto decimale,*/
+    printf("float_1 %5.2f\n",float_1);
+
+    /*iv. float_2 occupando almeno 2 spazi e con una precisione di 3 posizioni dopo il punto decimale.*/
+    printf("float_2 %1.3f\n",float_2);
+
+    return 0;
+}
