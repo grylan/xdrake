@@ -7,7 +7,7 @@ function carica() {
 	$.ajax({
 		type: "GET",
 		url: "http://testsolar.zxq.net/scuola/test.xml",
-		timeout:15,
+		timeout:2000,
 		dataType: "xml", 
 		error: function (xml) {
 			$("#contenuto").append("<b>Caricamento locale effettuato</b><br>");

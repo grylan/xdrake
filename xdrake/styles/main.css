@@ -3,6 +3,13 @@ body
 	margin-left: 4px;
 	margin-right: 4px;
 }
+#prova_font
+{
+	position: fixed;
+    
+	-webkit-animation: fontbulger 4s ease infinite;
+	font-size: 20px; 
+}
 
 .ui-footer
 {
@@ -13,20 +20,61 @@ body
 {
 	color: red;
 }
-
-#map_canvas
+#str1
 {
-	text-align: center;
+	border-color: rgb(0, 0, 0);
+	background: url('../jquery-mobile/images/str.png');
 }
+#str2
+{
+	
+	
+	border-color: rgb(0, 0, 0);
+	background: url('../jquery-mobile/images/str3.png');
+	-webkit-animation: opacita 5s infinite; /* Safari and Chrome */
+}
+#str4
+{
+	border-color: rgb(0, 0, 0);
+	background: url('../jquery-mobile/images/str4.png');
+}
+
 #casella
 {
+	border-color: rgb(0, 0, 0);
 	border-bottom: 2pt solid black;
 	padding: 12px;
-    padding-left:10px;
+	padding-left: 10px;
 }
 #contenuto
 {
+     
+	border-color: rgb(0, 0, 0);
 	border: 4pt solid black;
 	padding: 12px;
-    padding-left:10px;
+	padding-left: 10px;
+}
+
+@-webkit-keyframes colore /* Safari and Chrome */
+{
+0%, 100% { background: rgb(0, 0, 0); }
+50% { background: brown; }
+} 
+
+@-webkit-keyframes fontbulger {
+0%,100% {
+	
+	color: red;
+	left: 10%;
+}
+50% {
+	
+	color: black;
+	left: 60%;
+}
+}
+@-webkit-keyframes opacita /* Safari and Chrome */
+{
+0%, 100% { opacity: 0.7; }
+50% { opacity: 1; }
 }
